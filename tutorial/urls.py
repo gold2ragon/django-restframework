@@ -20,3 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('snippets.urls')),
 ]
+# include the log in and logout views for the browsable API
+urlpatterns += [
+    path('api-auth/', include('rest_framework.urls')),
+]
